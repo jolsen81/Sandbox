@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Date Sort</title>
+</head>
+<body>
+  <div>
+    <table>
+      <tr>
+        <td>
+          <input type="datetime-local" id="startDate">
+        </td>
+        <td>
+          <input type="datetime-local" id="endDate">
+        </td>
+      </tr>
+    <table>
+  <div>
+    {{$dates := dateRange .}}
+  <div>
+    <table>
+      <tr>
+        <th><b>Date</b></th>
+      </tr>
+      <tbody id="tableBody">
+        {{range .}}
+        <tr>
+          <td>{{.}}</td>
+        </tr>
+        {{end}}
+      </tbody>
+    </table>
+  </div>
+</body>
